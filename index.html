@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日AI与科技情报日报</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .report-list {
+            list-style: none;
+        }
+        .report-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .report-item:last-child {
+            border-bottom: none;
+        }
+        .report-item:hover {
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .date {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .links {
+            display: flex;
+            gap: 15px;
+        }
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: #f0f2ff;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+        .links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        .empty {
+            text-align: center;
+            color: #999;
+            padding: 40px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📰 每日AI与科技情报日报</h1>
+        <p class="subtitle">自动生成的AI与科技新闻日报，每日更新</p>
+        
+        <ul class="report-list" id="reportList">
+            <li class="empty">暂无报告，请稍后再来</li>
+        </ul>
+        
+        <div class="footer">
+            由 OpenClaw 探微 Agent 自动生成<br>
+            <a href="https://github.com/Yu-Xiao-Sheng/daily-report" target="_blank">GitHub</a>
+        </div>
+    </div>
+    
+    <script>
+        // 动态加载报告列表
+        fetch('reports.json')
+            .then(r => r.json())
+            .then(data => {
+                const list = document.getElementById('reportList');
+                if (data.reports && data.reports.length > 0) {
+                    list.innerHTML = data.reports.map(r => `
+                        <li class="report-item">
+                            <span class="date">${r.date}</span>
+                            <div class="links">
+                                ${r.morning ? `<a href="${r.morning}">🌅 早报</a>` : ''}
+                                ${r.noon ? `<a href="${r.noon}">☀️ 午报</a>` : ''}
+                                ${r.evening ? `<a href="${r.evening}">🌙 晚报</a>` : ''}
+                            </div>
+                        </li>
+                    `).join('');
+                }
+            })
+            .catch(() => {});
+    </script>
+</body>
+</html>
