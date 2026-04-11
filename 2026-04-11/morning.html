@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>早间情报 - 2026年4月11日</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf7f5;
+      --surface: #ffffff;
+      --border: rgba(0,0,0,0.08);
+      --text: #1a1a1a;
+      --text-dim: #666666;
+      --accent: #c2410c;
+      --accent-dim: rgba(194,65,12,0.1);
+      --sage: #65a30d;
+      --sage-dim: rgba(101,163,13,0.1);
+      --blue: #0891b2;
+      --blue-dim: rgba(8,145,178,0.1);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --font-display: 'Noto Serif SC', serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --surface: #1e293b;
+        --border: rgba(255,255,255,0.08);
+        --text: #f1f5f9;
+        --text-dim: #94a3b8;
+        --accent: #fb923c;
+        --accent-dim: rgba(251,146,60,0.15);
+        --sage: #84cc16;
+        --sage-dim: rgba(132,204,22,0.15);
+        --blue: #22d3ee;
+        --blue-dim: rgba(34,211,238,0.15);
+      }
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    
+    .header-meta {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .header h1 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--sage) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .header-subtitle {
+      color: var(--text-dim);
+      font-size: 1rem;
+    }
+    
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+    }
+    
+    /* Featured */
+    .featured {
+      background: linear-gradient(135deg, var(--accent-dim) 0%, var(--sage-dim) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .featured-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    
+    .featured h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    
+    .featured p {
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+    
+    .featured a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .featured a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Featured Grid */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .featured-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .featured-item h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    
+    .featured-item p {
+      color: var(--text-dim);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .featured-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+    
+    /* Sections */
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+    
+    .section-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    
+    .section-icon.ai { background: var(--accent-dim); }
+    .section-icon.tools { background: var(--sage-dim); }
+    .section-icon.dev { background: var(--blue-dim); }
+    
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .section-count {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      background: var(--surface);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      margin-left: auto;
+    }
+    
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1rem;
+    }
+    
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+    
+    .card-number {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      background: var(--bg);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+    
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+      flex: 1;
+    }
+    
+    .card p {
+      color: var(--text-dim);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .card-footer {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      background: var(--bg);
+      color: var(--text-dim);
+    }
+    
+    .tag.source {
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+    
+    .tag.link {
+      background: var(--sage-dim);
+      color: var(--sage);
+    }
+    
+    /* Footer */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.875rem;
+    }
+    
+    .footer-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    
+    .footer-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      .header h1 {
+        font-size: 1.75rem;
+      }
+      
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .header, .stats, .featured, .section {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    .stats { animation-delay: 0.1s; }
+    .featured { animation-delay: 0.2s; }
+    .section:nth-child(1) { animation-delay: 0.3s; }
+    .section:nth-child(2) { animation-delay: 0.4s; }
+    .section:nth-child(3) { animation-delay: 0.5s; }
+    
+    @media (prefers-reduced-motion: reduce) {
+      .header, .stats, .featured, .section {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-meta">2026年4月11日 09:00 · 时间范围: 最近6小时</div>
+      <h1>🌅 早间情报</h1>
+      <div class="header-subtitle">AI & 前沿技术 · 工具资源 · 技术教程</div>
+    </header>
+    
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-value">7</div>
+        <div class="stat-label">精选文章</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">2</div>
+        <div class="stat-label">AI 技术</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">2</div>
+        <div class="stat-label">工具资源</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">3</div>
+        <div class="stat-label">技术教程</div>
+      </div>
+    </div>
+    
+    <!-- Featured -->
+    <div class="featured">
+      <div class="featured-label">🎯 今日重点</div>
+      <h2>Claude 和 Codex 在审计 Skill 上性能差异探究</h2>
+      <p>随着 AI 在代码审计和漏洞挖掘中的应用日益普及，作者将代码审计流程转化为 Skill 供大模型参考。文章深入分析了大模型在处理大量代码时因上下文窗口容量有限而存在的性能差异，为选择合适的 AI 工具提供参考。</p>
+      <a href="https://www.cnblogs.com/ACaiGarden/p/19849323" target="_blank">📎 查看详情 →</a>
+    </div>
+    
+    <!-- Featured Grid -->
+    <div class="featured-grid">
+      <div class="featured-item">
+        <h3>[开源] Codeg V0.7.0：多智能体 IDE</h3>
+        <p>专为 AI 编码智能体设计的统一工作空间，支持多智能体协作、Git 工作树、MCP/Skills 管理。新版本内置"专家技能"，支持 IM 消息通道。</p>
+        <a href="https://www.v2ex.com/t/1205007#reply0" target="_blank">📎 查看详情 →</a>
+      </div>
+      <div class="featured-item">
+        <h3>Android 开发者为什么必须掌握 AI 能力？</h3>
+        <p>从端侧视角分析技术变革，强调 AI 在 Android 开发中的重要性，开发者需紧跟 AI 发展提升效率和用户体验。</p>
+        <a href="https://www.cnblogs.com/joy99/p/19824530" target="_blank">📎 查看详情 →</a>
+      </div>
+    </div>
+    
+    <!-- AI Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon ai">🤖</div>
+        <h2 class="section-title">AI & 前沿技术</h2>
+        <span class="section-count">1 条</span>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>你的 AI 焦虑，可能比 AI 本身更危险</h3>
+            <span class="card-number">#1</span>
+          </div>
+          <p>探讨对 AI 的焦虑可能比 AI 本身更具破坏性。以 ATM 机为例，其出现并未导致银行柜员消失，但恐慌情绪却影响了人们的判断力。引用凯恩斯观点，强调历史中类似反直觉现象的普遍性。</p>
+          <div class="card-footer">
+            <span class="tag source">博客园</span>
+            <span class="tag">AI思考</span>
+            <a href="https://www.cnblogs.com/wmyskxz/p/19849032" target="_blank" class="tag link">链接</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Tools Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon tools">🛠️</div>
+        <h2 class="section-title">工具 & 资源</h2>
+        <span class="section-count">2 条</span>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>Awesome Bilibili Extra Rev：B站增强工具合集</h3>
+            <span class="card-number">#2</span>
+          </div>
+          <p>持续维护的 B站增强工具合集，包含高质量扩展、脚本、下载工具等。自动清理失效项目，智能筛选机制，保持列表"干净可用"，适用于寻找优质 B站插件的用户。</p>
+          <div class="card-footer">
+            <span class="tag source">V2EX</span>
+            <span class="tag">工具</span>
+            <span class="tag">B站</span>
+            <a href="https://www.v2ex.com/t/1205046#reply0" target="_blank" class="tag link">链接</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <h3>浏览器书签同步又挂了？自建 linkding 书签管理器</h3>
+            <span class="card-number">#3</span>
+          </div>
+          <p>浏览器书签同步不稳定？文章提供宝塔部署 linkding 书签管理器的完整教程，实现书签自托管，告别同步烦恼。</p>
+          <div class="card-footer">
+            <span class="tag source">BlogFinder</span>
+            <span class="tag">自托管</span>
+            <span class="tag">教程</span>
+            <a href="https://www.886a.top/archives/864.html" target="_blank" class="tag link">链接</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Dev Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon dev">💻</div>
+        <h2 class="section-title">技术教程</h2>
+        <span class="section-count">4 条</span>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>一个拉胯的分库分表方案有多绝望？整个部门都在救火！</h3>
+            <span class="card-number">#4</span>
+          </div>
+          <p>深夜，办公室全员加班应对系统第三次故障。追查发现故障原因出人意料——分库分表方案设计不当。深入分析架构踩坑经验，值得借鉴。</p>
+          <div class="card-footer">
+            <span class="tag source">博客园</span>
+            <span class="tag">数据库</span>
+            <span class="tag">架构</span>
+            <a href="https://www.cnblogs.com/binghe001/p/19848959" target="_blank" class="tag link">链接</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <h3>AScript如何实现中文脚本引擎</h3>
+            <span class="card-number">#5</span>
+          </div>
+          <p>AScript 是开源的 C# 脚本解析执行库，支持自定义语法解析。本文通过实现 ITokenHandler 接口，展示如何构建中文脚本引擎，包括条件语句的实现。</p>
+          <div class="card-footer">
+            <span class="tag source">博客园</span>
+            <span class="tag">C#</span>
+            <span class="tag">脚本引擎</span>
+            <a href="https://www.cnblogs.com/rockey627/p/19849198" target="_blank" class="tag link">链接</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <h3>【渗透测试】HTB Season10 Garfield 全过程wp</h3>
+            <span class="card-number">#6</span>
+          </div>
+          <p>使用 Nmap 对目标进行全端口扫描，记录完整渗透测试流程。HackTheBox 实战案例，适合安全学习者参考。</p>
+          <div class="card-footer">
+            <span class="tag source">博客园</span>
+            <span class="tag">安全</span>
+            <span class="tag">渗透测试</span>
+            <a href="https://www.cnblogs.com/DSchenzi/p/19849166" target="_blank" class="tag link">链接</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <h3>树状数组正确性证明</h3>
+            <span class="card-number">#7</span>
+          </div>
+          <p>介绍树状数组模板，用于高效处理区间加法和查询问题。模板中 add 函数通过循环更新树状数组，query 函数通过递归查询实现。</p>
+          <div class="card-footer">
+            <span class="tag source">博客园</span>
+            <span class="tag">算法</span>
+            <span class="tag">数据结构</span>
+            <a href="https://www.cnblogs.com/ac-wyr/p/19849065" target="_blank" class="tag link">链接</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <p>数据来源: Miniflux RSS (AI、科技媒体、新闻资讯分类)</p>
+      <div class="footer-meta">
+        <span>📅 2026年4月11日 09:00</span>
+        <span>⏱️ 时间范围: 最近6小时</span>
+        <span>📊 筛选自 50 条最新资讯</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
