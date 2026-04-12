@@ -1,6 +1,10 @@
 {
   "reports": [
     {
+      "date": "2026-04-12",
+      "evening": "2026-04-12/evening.html"
+    },
+    {
       "date": "2026-04-11",
       "morning": "2026-04-11/morning.html",
       "noon": "2026-04-11/noon.html"

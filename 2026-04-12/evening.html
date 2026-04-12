@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年4月12日 AI与科技晚报</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --border-color: #475569;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        header .meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .highlight-box h2 {
+            font-size: 1.1rem;
+            color: var(--accent-purple);
+            margin-bottom: 0.75rem;
+        }
+        
+        .highlight-box p {
+            color: var(--text-secondary);
+        }
+        
+        .highlight-box a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        
+        .highlight-box a:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-title .icon {
+            font-size: 1.25rem;
+        }
+        
+        .news-item {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .news-item .number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: var(--accent-blue);
+            border-radius: 8px;
+            text-align: center;
+            line-height: 28px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-right: 0.75rem;
+        }
+        
+        .news-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: inline;
+        }
+        
+        .news-item .source {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .news-item .source a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        
+        .news-item .desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+        
+        .tag.ai { background: rgba(139, 92, 246, 0.2); color: var(--accent-purple); }
+        .tag.tool { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+        .tag.tutorial { background: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
+        .tag.insight { background: rgba(245, 158, 11, 0.2); color: var(--accent-orange); }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 2026年4月12日 AI与科技晚报</h1>
+            <div class="meta">
+                ⏰ 时间范围：最近24小时 (UTC+8) | 📊 文章数量：15条精选 | 🔄 补偿任务
+            </div>
+        </header>
+
+        <div class="highlight-box">
+            <h2>🎯 今日重点</h2>
+            <p><strong>Claude 三种 Agent 架构全解析：SDK vs Teams vs Managed 如何选择。</strong> 深度分析 Anthropic 发布的三种 Agent 架构，帮助开发者选择正确的架构方案，避免数周开发工作付诸东流。</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://mengtnt.com/2026/04/12/01-04.html" target="_blank">📎 查看详情</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🤖</span> AI & 前沿技术</h2>
+            
+            <div class="news-item">
+                <span class="number">1</span>
+                <h3>Claude 三种 Agent 架构全解析：SDK vs Teams vs Managed 如何选择</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">深度分析 Anthropic 发布的 Agent SDK、Agent Teams 和 Managed Agents 三种架构，从控制粒度、开发工作量、状态管理等维度进行对比，帮助开发者做出正确选择。</p>
+                <p class="source">来源：<a href="https://mengtnt.com/2026/04/12/01-04.html" target="_blank">mengtnt的Blog</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">2</span>
+                <h3>AI 时代，敏捷宣言已死？听听 Martin Fowler 和 Kent Beck 怎么说</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">两位敏捷宣言签署者在 AI 时代进行的世纪对话。他们认为 AI 正在让软件开发"重新孤岛化"，并给出了在 AI 浪潮中唯一能抓住的几块礁石。</p>
+                <p class="source">来源：<a href="https://tonybai.com/2026/04/12/agile-manifesto-dead-in-ai-era-martin-fowler-kent-beck/" target="_blank">TonyBai | 白明</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">3</span>
+                <h3>Claude Code 从 AWS Bedrock 切换到 Team 订阅指南</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">详细说明从 AWS Bedrock 认证切换到 Claude Team 订阅的完整步骤，包括清除 Bedrock 配置、重新登录和确认切换成功的方法。</p>
+                <p class="source">来源：<a href="https://blog.devtang.com/2026/04/12/switch-bedrock-to-team/" target="_blank">DevTang | 唐巧</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">4</span>
+                <h3>从零开始的双臂具身VLA起源及现阶段发展综述</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">系统梳理从大语言模型到具身智能的范式跃迁，深入分析双臂具身VLA的发展历程和现状，涵盖技术原理和应用场景。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/SkyXZ/p/19856410" target="_blank">SkyXZ - 博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">5</span>
+                <h3>做 AI Agent 的时候发现：说得越多，Agent 越强</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">分享开发语音驱动 Agent 项目的经验，发现给 Agent 的上下文越多，模型效果越好。介绍了一个 ASR+LLM 的 Talk API 服务。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205353#reply0" target="_blank">V2EX - 分享创造</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">6</span>
+                <h3>关于10年工作经验的程序员对OpenClaw的实战经验分享</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">资深程序员分享使用 OpenClaw 的实战经验，探讨 AI 时代程序员如何自处，以及如何利用 AI 工具提升工作效率。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/xuwujing/p/19848930" target="_blank">虚无境 - 博客园</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🛠️</span> 工具 & 开源项目</h2>
+            
+            <div class="news-item">
+                <span class="number">7</span>
+                <h3>开源 | 小红书 + 抖音 + 闲鱼 全平台 API，给 AI Agent 补上平台 I/O</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">开源三个项目：Spider_XHS（小红书运营）、DouYin_Spider（抖音直播互动）、XianYuApis（闲鱼客服），为 AI Agent 提供平台接入能力。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205259#reply13" target="_blank">V2EX - 分享创造</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">8</span>
+                <h3>ccg-gateway：多功能代理网关，支持 Claude + Codex + Gemini</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">解决 vibe coding 过程中服务商不稳定、多账号切换繁琐等问题。支持服务商自动切换、请求日志记录、MCP/提示词/Skill 统一管理。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205316#reply4" target="_blank">V2EX - 分享创造</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">9</span>
+                <h3>开源一个 coding agent: tcode，针对命令行 power user</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">基于 NeoVim 和 tmux 的 coding agent，支持 Linux 和 macOS。使用 tmux 管理窗口，用 neovim 进行消息编辑和会话查看。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205318#reply0" target="_blank">V2EX - 分享创造</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">10</span>
+                <h3>做了一个论文阅读器 Freddie，支持 LLM 翻译</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">macOS 论文阅读应用，支持完整 PDF 翻译，使用 BabelDOC CLI 输出翻译 PDF，双栏展示。轻量本地管理，完全开源。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205309#reply0" target="_blank">V2EX - 分享创造</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">11</span>
+                <h3>0trace - 纯 P2P 加密传文件/聊天，不过服务器</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">基于 WebRTC 的纯 P2P 工具，数据直接在两台设备之间走，服务器只负责交换信令。支持 10GB+ 大文件传输，完全开源。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205251#reply0" target="_blank">V2EX - 分享创造</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">12</span>
+                <h3>只需不到十元，用 RP2040 DIY 一条 YubiKey FIDO2 物理密钥</h3>
+                <span class="tag tool">DIY</span>
+                <p class="desc">使用廉价的 RP2040 开发板 DIY FIDO2 物理密钥，成本不到十元，提升账户安全性。</p>
+                <p class="source">来源：<a href="https://wuminboke.site/uncategorized/diy-fido2-key-for-less-than-ten-dollar-using-rp2040/" target="_blank">BlogFinder</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">💡</span> 技术思考 & 教程</h2>
+            
+            <div class="news-item">
+                <span class="number">13</span>
+                <h3>受够了 Vibe Coding 的失控？换个起点，让 AI 事半功倍</h3>
+                <span class="tag insight">思考</span>
+                <p class="desc">分析 Vibe Coding 失控的根源是上下文承载量的物理极限。提出解决方案：用成熟模块把 AI 的工作量压缩到只补 20% 胶水代码。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/haibindev/p/19856369" target="_blank">海滨code - 博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">14</span>
+                <h3>帮你成为项目吸血鬼的 AI 工具</h3>
+                <span class="tag insight">工具</span>
+                <p class="desc">一套 AI Skills，帮助你把一个 CRUD 项目干三年，避免因为代码写得太"好"而总是被拉去做新项目。开源可用。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205262#reply16" target="_blank">V2EX - 分享创造</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">15</span>
+                <h3>AI 学习笔记：Agent 的记忆机制</h3>
+                <span class="tag tutorial">教程</span>
+                <p class="desc">详细记录如何为 Agent 应用构建记忆系统，涵盖 RAG、长上下文窗口等技术方案。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/owlman/p/19854861" target="_blank">凌杰 - 博客园</a></p>
+            </div>
+        </div>
+
+        <footer>
+            <p>📊 数据来源：Miniflux RSS（AI、科技媒体、新闻资讯分类）</p>
+            <p>🔍 筛选自最近24小时资讯，排除已推送和交易类内容</p>
+            <p style="margin-top: 0.5rem;">生成时间：2026年4月12日 08:00 (补偿任务)</p>
+        </footer>
+    </div>
+</body>
+</html>
