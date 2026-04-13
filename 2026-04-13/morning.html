@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌅 早间情报 - 2026年4月13日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header .meta {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 30px;
+        }
+        .summary {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        .summary h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .section h2 .emoji {
+            margin-right: 10px;
+        }
+        .article-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .article-card h3 {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+        }
+        .article-card h3 a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .article-card h3 a:hover {
+            color: #667eea;
+        }
+        .article-card .meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .article-card .meta span {
+            margin-right: 15px;
+        }
+        .article-card .summary {
+            background: transparent;
+            border-left: none;
+            padding: 0;
+            margin-bottom: 12px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .article-card .link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .article-card .link:hover {
+            text-decoration: underline;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .highlight-box h3 {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+        .highlight-box p {
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        .highlight-box .link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #fff;
+            text-decoration: underline;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-card .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-card .label {
+            color: #666;
+            margin-top: 5px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌅 早间情报</h1>
+            <div class="meta">2026年4月13日 星期一 | 09:00</div>
+            <div class="meta">时间范围：最近6小时（03:00 - 09:00 UTC+8）</div>
+        </div>
+        
+        <div class="content">
+            <div class="summary">
+                <h2>📝 今日概述</h2>
+                <p>今日早间重点关注：Go社区资深布道师Dave Cheney提出Goroutine管理四大哲学，揭示并发编程下半场；Claude推出dynamic looping功能，让AI自主决定执行节奏；15个实用Claude口令可替代12款付费软件，每年节省约38000元订阅费。</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎯</span>今日重点</h2>
+                
+                <div class="highlight-box">
+                    <h3>别再无脑 go func() 了！Go 资深布道师 Dave Cheney 的 Goroutine 管理哲学</h3>
+                    <p>Go社区资深布道师Dave Cheney在GopherCon Singapore大会上提出Goroutine管理四大哲学：内存是有价的、永远不要启动一个你不知道如何停止的Goroutine、优雅地请求停止而非强制、把并发权留给调用者。文章详细介绍了从Tomb到Errgroup再到pkg/group的Goroutine管理方案演进，揭示并发编程的下半场——Goroutine生命周期管理。</p>
+                    <a href="https://tonybai.com/2026/04/13/dave-cheney-goroutine-management-philosophy/" class="link">📎 阅读原文</a>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>Claude动态循环机制解析：智能体自己决定Cron执行闹钟！</h3>
+                    <p>Claude推出的dynamic looping功能让AI自主决定执行节奏，从固定轮询转向事件驱动。这个变化把"什么时候执行任务"的决定权从人类手里交给AI模型，标志Agent开始具备时间感知能力。但目前受限于会话边界，只能处理短期任务，长期任务仍需依赖传统调度工具。</p>
+                    <a href="https://www.jdon.com/91410-claude-dynamic-looping-ai-scheduling.html" class="link">📎 阅读原文</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🤖</span>AI & 前沿技术</h2>
+                
+                <div class="article-card">
+                    <h3><a href="https://www.jdon.com/91408-claude-12-prompts-save-dollars.html">15句Claude口令，每年帮你省下3万8千块软件费！</a></h3>
+                    <div class="meta">
+                        <span>📰 极道</span>
+                        <span>🕐 06:33</span>
+                    </div>
+                    <div class="summary">文章提供了15个实用Claude口令，可替代语法检查、文案生成、会议转录、社交媒体排期、邮件营销、SEO分析等12款付费软件，每年可节省约38000元订阅费。每个口令即拿即用，附带策略逻辑解释，让Claude从工具变成生产力助手。</div>
+                    <a href="https://www.jdon.com/91408-claude-12-prompts-save-dollars.html" class="link">📎 阅读原文 →</a>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="number">3</div>
+                    <div class="label">AI & 前沿技术</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">2</div>
+                    <div class="label">独立博客</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">1</div>
+                    <div class="label">技术教程</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">3</div>
+                    <div class="label">总计文章</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>早报由 OpenClaw 探微自动生成</p>
+            <p>数据来源: Miniflux RSS (AI、科技媒体、独立博客分类)</p>
+        </div>
+    </div>
+</body>
+</html>
