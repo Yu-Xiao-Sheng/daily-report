@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年4月13日 AI与科技午报</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --border-color: #475569;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        header .meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .overview-box {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .overview-box h2 {
+            font-size: 1.1rem;
+            color: var(--accent-orange);
+            margin-bottom: 0.75rem;
+        }
+        
+        .overview-box p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-title.emoji {
+            font-size: 1.5rem;
+        }
+        
+        .highlight-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-purple);
+        }
+        
+        .highlight-card h3 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .highlight-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .highlight-card a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        
+        .highlight-card a:hover {
+            text-decoration: underline;
+        }
+        
+        .news-item {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent-blue);
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .news-item h4 {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-item h4 a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .news-item h4 a:hover {
+            color: var(--accent-blue);
+        }
+        
+        .news-item p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-item .source {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        
+        .news-item .source a {
+            color: var(--accent-blue);
+        }
+        
+        .tool-item {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent-green);
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .tool-item h4 {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-item h4 a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .tool-item h4 a:hover {
+            color: var(--accent-green);
+        }
+        
+        .tool-item p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-item .source {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        
+        .tool-item .source a {
+            color: var(--accent-green);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        .badge-ai {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--accent-purple);
+        }
+        
+        .badge-tool {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--accent-green);
+        }
+        
+        .badge-tech {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--accent-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>☀️ 午间情报 - 2026年4月13日</h1>
+            <p class="meta">时间范围: 08:00-12:00 UTC+8 | 来源: Miniflux RSS</p>
+        </header>
+        
+        <div class="overview-box">
+            <h2>📝 概述</h2>
+            <p>午间重点：Go语言Goroutine管理哲学引发讨论，资深布道师Dave Cheney提出四大原则；Claude Code工具链持续优化，CC-Switch使用技巧揭秘；AI开发工具CodeBuddy公开218个技能库。技术实战：单表五亿数据查询优化方案；.NET+AI进阶实战指南。前沿探索：双臂具身VLA发展综述；AI Agent语音处理优化实践。</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><span class="section-title emoji">🎯</span> 今日重点</h2>
+            
+            <div class="highlight-card">
+                <h3>Go Goroutine 管理哲学：Dave Cheney 的四大原则</h3>
+                <p>Go社区资深布道师Dave Cheney强调，Goroutine是有限资源需谨慎使用。提出四大哲学：内存有限，Goroutine为"内存之根"；勿启动未知如何停止的Goroutine；优雅请求停止而非强迫；利用Context管理生命周期。不当使用可能导致内存溢出。</p>
+                <a href="https://tonybai.com/2026/04/13/dave-cheney-goroutine-management-philosophy/" target="_blank">📎 阅读原文 →</a>
+            </div>
+            
+            <div class="highlight-card">
+                <h3>CC-Switch 使用技巧：90%的人都没用对</h3>
+                <p>Claude Code用户常遇痛点：手动调整设置易出错、格式崩溃、切换模型耗时。本文详解CC-Switch正确用法，解决代理密钥分散管理难题，提升开发效率。</p>
+                <a href="https://www.cnblogs.com/jinjiangongzuoshi/p/19857759" target="_blank">📎 阅读原文 →</a>
+            </div>
+            
+            <div class="highlight-card">
+                <h3>CodeBuddy 装备库：218个技能全公开</h3>
+                <p>开发者公开其CodeBuddy装备库，包含218个技能和使用心得，涵盖AI开发全流程，为开发者提供完整参考。</p>
+                <a href="https://wuqishi.com/codebuddy-equipment-library-218-skills-guide-experience/" target="_blank">📎 阅读原文 →</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><span class="section-title emoji">🤖</span> AI & 前沿技术</h2>
+            
+            <div class="news-item">
+                <h4><a href="https://www.cnblogs.com/sevencoding/p/19821521" target="_blank">【从0到1构建ClaudeAgent】规划与协调-技能</a></h4>
+                <p>提出Java实现方案，解决Agent开发中上下文窗口限制与知识广度的矛盾，通过特定设计优化知识处理能力。</p>
+                <p class="source">📎 来源: <a href="https://www.cnblogs.com/sevencoding/p/19821521" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <h4><a href="https://www.cnblogs.com/net-kevin-li/p/19857580" target="_blank">.NET + AI 进阶实战：基于类的技能开发</a></h4>
+                <p>聚焦Class-based Skill开发，解决工程中长期治理问题，注重技术可治理性和持续性。</p>
+                <p class="source">📎 来源: <a href="https://www.cnblogs.com/net-kevin-li/p/19857580" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <h4><a href="https://www.cnblogs.com/SkyXZ/p/19856410" target="_blank">从零开始的双臂具身VLA起源及发展综述</a></h4>
+                <p>探讨从大语言模型到具身智能的范式跃迁，分析LLM/VLM在具身智能中的应用。</p>
+                <p class="source">📎 来源: <a href="https://www.cnblogs.com/SkyXZ/p/19856410" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <h4><a href="https://www.v2ex.com/t/1205353#reply3" target="_blank">做 AI Agent 的时候发现：说得越多，Agent越强</a></h4>
+                <p>开发语音驱动Agent项目，通过ASR+LLM后处理优化STT转换质量，推出Sayd API服务。</p>
+                <p class="source">📎 来源: <a href="https://www.v2ex.com/t/1205353#reply3" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <h4><a href="https://www.cnblogs.com/haibindev/p/19856369" target="_blank">受够了Vibe Coding的失控？换个起点让AI事半功倍</a></h4>
+                <p>解决AI代码生成失控问题，利用成熟模块压缩AI工作量至20%胶水代码，减少幻觉和漂移。</p>
+                <p class="source">📎 来源: <a href="https://www.cnblogs.com/haibindev/p/19856369" target="_blank">博客园</a></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><span class="section-title emoji">🛠️</span> 工具 & 资源</h2>
+            
+            <div class="tool-item">
+                <h4><a href="https://www.v2ex.com/t/1205398#reply4" target="_blank">easy-i18n：可能是最好用的多语言管理工具</a></h4>
+                <p>支持MacOS/Linux/Windows，管理多语言词条，提供过滤、排序和自动化翻译功能，免费开源+付费商业版。</p>
+                <p class="source">📎 来源: <a href="https://www.v2ex.com/t/1205398#reply4" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="tool-item">
+                <h4><a href="https://www.v2ex.com/t/1205415#reply0" target="_blank">eproxy：分享转发加速辅助工具</a></h4>
+                <p>利用GPT5.4/5.3-Codex开发，解决服务器直连质量问题，通过SNI注入改善访问体验，已加入cc-switch。</p>
+                <p class="source">📎 来源: <a href="https://www.v2ex.com/t/1205415#reply0" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="tool-item">
+                <h4><a href="https://www.cnblogs.com/hawk2026/p/19857400" target="_blank">WorkBuddy：从"我是谁"到"帮我干活"</a></h4>
+                <p>使用大语言模型通过自然语言控制电脑操作，读写本地文件，简化工作流程。</p>
+                <p class="source">📎 来源: <a href="https://www.cnblogs.com/hawk2026/p/19857400" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="tool-item">
+                <h4><a href="https://www.cnblogs.com/whuanle/p/19857284" target="_blank">单表五亿数据的查询优化 | MySQL、StarRocks</a></h4>
+                <p>探讨5亿条数据的空间占用、索引优化、查询性能，运用StarRocks BitMap优化大数据分页。</p>
+                <p class="source">📎 来源: <a href="https://www.cnblogs.com/whuanle/p/19857284" target="_blank">博客园</a></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>📊 共 12 条资讯 | 时间范围: 08:00-12:00 UTC+8 | 来源: Miniflux RSS</p>
+            <p style="margin-top: 0.5rem; color: var(--text-muted);">Powered by OpenClaw Agent</p>
+        </footer>
+    </div>
+</body>
+</html>

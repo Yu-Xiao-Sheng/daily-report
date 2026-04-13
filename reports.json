@@ -2,7 +2,8 @@
   "reports": [
     {
       "date": "2026-04-13",
-      "morning": "2026-04-13/morning.html"
+      "morning": "2026-04-13/morning.html",
+      "noon": "2026-04-13/noon.html"
     },
     {
       "date": "2026-04-12",
