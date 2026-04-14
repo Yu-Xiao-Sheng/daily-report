@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年4月14日 AI与科技早报</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --border-color: #475569;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        header .meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .highlight-box h2 {
+            font-size: 1.1rem;
+            color: var(--accent-purple);
+            margin-bottom: 0.75rem;
+        }
+        
+        .highlight-box p {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        
+        .highlight-box a:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-title .icon {
+            font-size: 1.25rem;
+        }
+        
+        .news-item {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .news-item .number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: var(--accent-blue);
+            border-radius: 8px;
+            text-align: center;
+            line-height: 28px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-right: 0.75rem;
+        }
+        
+        .news-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: inline;
+        }
+        
+        .news-item .source {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .news-item .source a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        
+        .news-item .desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+        
+        .tag.ai { background: rgba(139, 92, 246, 0.2); color: var(--accent-purple); }
+        .tag.tool { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+        .tag.tutorial { background: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
+        .tag.insight { background: rgba(245, 158, 11, 0.2); color: var(--accent-orange); }
+        
+        .stats {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .stats h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+        }
+        
+        .stat-item .count {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+        
+        .stat-item .label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌅 2026年4月14日 AI与科技早报</h1>
+            <div class="meta">
+                ⏰ 时间范围：最近6小时 (03:00-09:00 UTC+8) | 📊 文章数量：18条精选
+            </div>
+        </header>
+
+        <div class="highlight-box">
+            <h2>🎯 今日重点</h2>
+            <p><strong>Hermes-Agent 用户突破 8 万，下一代 AI 智能体框架受追捧。</strong> Hermes-Agent 是 NousResearch 开发的下一代 AI 智能体框架，昨日新增 11,297 用户，累计达 84,776。支持持续学习、能力扩展和长期记忆。</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://www.cnblogs.com/saodiseng2015/p/19862784" target="_blank">📎 查看详情</a>
+            </p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>yoyo：一个正在实时自我进化的开源 Coding Agent。</strong> 项目从 200 行代码起步，现发展到 45,373 行，已提交 1,231 次 commit，拥有 1,830 个测试。更像探索中的"生命体"。</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://www.v2ex.com/t/1205540#reply11" target="_blank">📎 查看详情</a>
+            </p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>andrej-karpathy-skills 热度持续，Claude 代码行为规范工具累计 2 万星。</strong> 基于 Karpathy 的 AI 编程经验，帮助开发者更好地与 AI 协作编程。</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://www.cnblogs.com/saodiseng2015/p/19861714" target="_blank">📎 查看详情</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🤖</span> AI & 前沿技术</h2>
+            
+            <div class="news-item">
+                <span class="number">1</span>
+                <h3>和 AI 一起搞事情：Claude Teammate 游戏开发翻车实录</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">解锁 Claude 的 teammate 模式，尝试开发一款 AI-oriented + 中医学习小游戏。第一版游戏更像是大型事故现场，为开发者提供了宝贵的失败经验。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/gogoSandy/p/19862777" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">2</span>
+                <h3>OpenClaw Memory 架构解析：双层存储设计</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">OpenClaw 1.1 版本采用双层存储架构，包括短期记忆（每日日志）和长期记忆。深入探讨 OpenClaw 的内存设计，理解其核心架构和存储机制。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/rossiXYZ/p/19843410" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">3</span>
+                <h3>CLI+Skill 搭建浏览器 AI 自动化框架</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">AI 自动操作浏览器的流程，能替代用户完成机械重复性工作。部分工作流无需 AI 参与，0 TOKEN 即可实现自动化任务。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/tech-shrimp/p/19860693" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">4</span>
+                <h3>深度学习进阶：Data-efficient Image Transformer</h3>
+                <span class="tag ai">AI</span>
+                <p class="desc">ViT 模型依赖大量数据，因归纳偏置弱。通过蒸馏引入"软约束"缩小搜索空间，降低数据依赖，改进型 ViT：Data-efficient Image Transformer。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/Goblinscholar/p/19860718" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">5</span>
+                <h3>让 AI agent 把文件内容/git diff 转成预览地址的服务</h3>
+                <span class="tag tool">工具</span>
+                <p class="desc">CLI 工具解决 IM 中使用 AI Agent 时文件内容难以查看的问题，可将文件内容及 git diff 上传成加密的 preview 页面。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205555#reply0" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">6</span>
+                <h3>写了一个参考竞品/框架/系统的 Skill</h3>
+                <span class="tag tool">工具</span>
+                <p class="desc">融合竞品、框架、系统功能的 Skill，旨在全流程分析与实现规划中提升效率。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205530#reply5" target="_blank">V2EX</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🛠️</span> 工具 & 开源项目</h2>
+            
+            <div class="news-item">
+                <span class="number">7</span>
+                <h3>Codeg V0.8：专注于代码生成的多智能体 IDE</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">专为 AI 编码智能体打造的统一工作空间，支持多智能体协作、Git 并行开发、MCP/Skills 管理和聊天频道集成。支持 Docker 部署。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205623#reply1" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">8</span>
+                <h3>Bytro：集成 Claude 和 Codex 的全流程 AI 编程工具</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">支持需求设计、界面设计和编程落地，提供 10 美元免费额度，支持 Mac 和 Win 版本。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205587#reply0" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">9</span>
+                <h3>Recall：local-first 的 TUI 工具，AI CLI 会话本地搜索</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">帮助用户快速发现和检索电脑上 cc、opencode、codex 等 CLI 工具的所有 session，支持 brew 安装。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205569#reply1" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">10</span>
+                <h3>cc-telegram-bridge：把 Claude Code / Codex CLI 搬到 Telegram</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">支持会话管理、记忆和文件处理，双引擎选择、多机器人并行运行、YOLO 模式、语音输入。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205562#reply0" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">11</span>
+                <h3>AgentLimb：让 Claude Code / Cursor 直接操作真实 Chrome</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">Chrome 扩展通过保存成功动作路径实现重放，解决 AI 浏览器自动化重复任务耗能高的问题。开源免费。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205526#reply0" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">12</span>
+                <h3>OpenBiliClaw：专属的"AI 朋友"帮你找 B 站内容</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">打破传统推荐算法的限制，通过分析用户浏览习惯和心理画像，提供更个性化的内容推荐。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205612#reply0" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">13</span>
+                <h3>CaptionSearch.app：免费的 YouGlish 替代品</h3>
+                <span class="tag tool">工具</span>
+                <p class="desc">英语学习工具，搜索词、短语或俚语，观看 YouTube 视频中的实际使用场景。无需注册，无广告。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205607#reply5" target="_blank">V2EX</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">14</span>
+                <h3>轻量化 Serverless 服务：类似 Cloudflare Worker 的自建方案</h3>
+                <span class="tag tool">开源</span>
+                <p class="desc">支持直接在 Web Worker 中编写代码调用，无需容器部署。使用 Docker 运行，google nsjail 隔离保障安全。</p>
+                <p class="source">来源：<a href="https://www.v2ex.com/t/1205544#reply3" target="_blank">V2EX</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">💻</span> 技术教程</h2>
+            
+            <div class="news-item">
+                <span class="number">15</span>
+                <h3>VS Code 调试 Python 第三方库源码的配置</h3>
+                <span class="tag tutorial">教程</span>
+                <p class="desc">详细介绍如何在 VS Code 中配置调试 Python 第三方库源码，帮助开发者深入理解库的内部实现。</p>
+                <p class="source">来源：<a href="https://blog.algieba12.cn/debug-build-in-python-lib/" target="_blank">阿尔的代码屋</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">16</span>
+                <h3>C# .NET 周刊：商业级程序集逆向工程实践</h3>
+                <span class="tag tutorial">教程</span>
+                <p class="desc">详细记录了一次商业级 .NET 程序集的逆向工程实践，涵盖 PE 段加密、原生 DLL 提取和 JIT Hook 等技术。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/InCerry/p/-/dotnet_week_26_3_3" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">17</span>
+                <h3>K8s 单机搭建实战：Debian 11 /opt 目录版</h3>
+                <span class="tag tutorial">教程</span>
+                <p class="desc">尝试搭建 K8s 单节点环境，历经两天后成功配置。将所有数据目录迁移至 /opt，优化了环境设置。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/liwangwang/p/19861383" target="_blank">博客园</a></p>
+            </div>
+            
+            <div class="news-item">
+                <span class="number">18</span>
+                <h3>Linux 入门：远程登录与用户管理</h3>
+                <span class="tag tutorial">教程</span>
+                <p class="desc">介绍远程登录 Linux 的两种常用客户端工具 Xshell6 和 Xftp6，支持 SSH1、SSH2 和 Windows telnet 协议。</p>
+                <p class="source">来源：<a href="https://www.cnblogs.com/alineverstop/p/19860699" target="_blank">博客园</a></p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h3>📊 统计信息</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="count">6</div>
+                    <div class="label">AI & 前沿技术</div>
+                </div>
+                <div class="stat-item">
+                    <div class="count">8</div>
+                    <div class="label">工具 & 资源</div>
+                </div>
+                <div class="stat-item">
+                    <div class="count">4</div>
+                    <div class="label">技术教程</div>
+                </div>
+                <div class="stat-item">
+                    <div class="count">18</div>
+                    <div class="label">总计</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>早报由 OpenClaw 探微自动生成</p>
+            <p>数据来源: Miniflux RSS (AI、科技媒体、独立博客分类)</p>
+        </footer>
+    </div>
+</body>
+</html>
